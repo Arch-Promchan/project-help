@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - BMO</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center;">
+
+    <!-- Header Section -->
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 1px solid #ddd;">
+        <!-- Logo and Title -->
+        <div style="display: flex; align-items: center;">
+            <img src="https://i.postimg.cc/XqS4gc4b/S-8454159.jpg" alt="Logo" style="width: 50px; margin-right: 30px;">
+            <span style="font-size: 24px; font-weight: bold;">BMO</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+            <a href="https://arch-promchan.github.io/project-home/" style="margin: 0 10px; color: #333; text-decoration: none;">Home</a>
+            <a href="https://arch-promchan.github.io/dashboard/" style="margin: 0 10px; color: #333; text-decoration: none;">Dashboard</a>
+            <a href="https://arch-promchan.github.io/project-help/" style="margin: 0 10px; color: #333; text-decoration: none;">Help/About</a>
+            <a href="https://arch-promchan.github.io/create_account/" style="margin: 0 10px; color: #333; border: 1px solid #333; padding: 5px 10px; border-radius: 5px; text-decoration: none;">Login</a>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div style="display: flex; justify-content: space-between; margin: 50px auto; max-width: 1200px; gap: 20px;">
+        <!-- Left Section -->
+        <div style="width: 45%; text-align: left;">
+            <!-- Our Idea Box -->
+            <div style="border: 1px solid green; padding: 20px; margin-bottom: 20px;">
+                <h2>Our Idea</h2>
+                <p>We've developed a concept for a small improvement to the home—a parody of a smart home system. This system, built on the Pico W, allows users to monitor temperature, view data on a screen, and control electric appliances. The app is designed to make connecting to Wi-Fi easier for users, while all monitoring and interactions will take place on a website.</p>
+            </div>
+            
+            <!-- Our Team Box -->
+            <div style="border: 1px solid green; padding: 20px;">
+                <h2>Our Team</h2>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li>Kattarin Chaisutthisunthon</li>
+                    <li>Puripan Leelapong-Anan</li>
+                    <li>Arch Promchan</li>
+                    <li>Pradip Pandey</li>
+                    <li>Vladislav Starykh</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div style="width: 45%; text-align: left; border: 1px solid green; padding: 20px;">
+            <h2>Send us a message here...</h2>
+            <form onsubmit="sendMessage(); return false;">
+                <label for="name">Your Name</label><br>
+                <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+                <label for="phone">Telephone number</label><br>
+                <input type="text" id="phone" name="phone" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+                <label for="email">Email address</label><br>
+                <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+                <label for="message">Your Message</label><br>
+                <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea><br>
+
+                <button type="submit" style="padding: 10px 20px; border: 1px solid green; background-color: white; cursor: pointer; font-size: 16px;">Send message ➔</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function sendMessage() {
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            alert("Message sent!\nName: " + name + "\nPhone: " + phone + "\nEmail: " + email + "\nMessage: " + message);
+
+            // Add any other action, like sending the form data to a server.
+        }
+    </script>
+
+</body>
+</html>
